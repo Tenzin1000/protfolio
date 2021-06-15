@@ -3,8 +3,6 @@
     padding:0;
     box-sizing: border-box;
 }
-body{
-}
 .text-none{
     text-decoration: none;
 }
@@ -43,11 +41,9 @@ body{
     padding:5px 6px;
     cursor:pointer;
 }
-.list-menu li a:hover{
-    color:rgb(177 177 38);
-}
+.list li a{color:#1a93b5;}
 .list-menu li:hover {
-    background-color: #551A8B;
+    background-color: #2a064d;
 }
 .icons{
     display: flex;

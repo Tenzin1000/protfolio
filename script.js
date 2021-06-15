@@ -25,6 +25,7 @@ moon.addEventListener('click',()=>{
     sun.style.display='block';
     document.getElementById('skill-title').style.color='rgba(255,2,2,.8)'
     document.getElementById('skill-title').style.textShadow='none';
+
     document.getElementById('homenav').style.color="rgb(177 177 38)";
     document.getElementById('aboutnav').style.color="rgb(177 177 38)";
     document.getElementById('projectnav').style.color="rgb(177 177 38)";
@@ -42,7 +43,7 @@ moon.addEventListener('click',()=>{
     document.getElementById('about').style.background="black"
     document.getElementById('contact-para').style.background="black"
     document.getElementById('contact-para').style.color="#d4d44c"
-    console.log('hi')
+
 });
 
 sun.addEventListener('click',function(){
@@ -50,12 +51,14 @@ sun.addEventListener('click',function(){
     sun.style.display='none';
     document.getElementById('skill-title').style.color='rgb(16, 155, 16)'
     document.getElementById('skill-title').style.textShadow='0px 3px 8px rgb(24 228 24)';
+
+    document.getElementById('homenav').style.color="#1a93b5";
+    document.getElementById('aboutnav').style.color="#1a93b5";
+    document.getElementById('projectnav').style.color="#1a93b5";
+    document.getElementById('contactnav').style.color="#1a93b5";
     
-    document.getElementById('homenav').style.color="#551A8B";
-    document.getElementById('aboutnav').style.color="#551A8B";
-    document.getElementById('projectnav').style.color="#551A8B";
-    document.getElementById('contactnav').style.color="#551A8B";
-    
+
+
     document.getElementById('navico').style.color="#551A8B";
     document.getElementById('navico1').style.color="#551A8B";
     document.getElementById('navico2').style.color="#551A8B";
@@ -67,5 +70,5 @@ sun.addEventListener('click',function(){
     document.getElementById('about').style.background="rgba(184, 177, 177, 0.548)"
     document.getElementById('contact-para').style.background="rgba(184, 177, 177, 0.548)"
     document.getElementById('contact-para').style.color="#551A8B"
-    console.log('hi')
+
 })
