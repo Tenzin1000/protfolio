@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+}
+.text-none{
+    text-decoration: none;
+}
+#container{
+    position:relative;
+}
+#navbar{
+    position: fixed;
+    top:0px;
+    left:20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#line{
+    border-right:1px solid blue;
+}
+.line{
+    height: 80px;
+}
+.list{
+    list-style-type: none;
+    text-decoration: none;
+    text-align:center;
+    font-size:25px;
+}
+.list li{
+    margin-top: 5px;
+    transition: all .5s;
+    padding:5px 6px;
+    cursor:pointer;
+}
+.list-menu li a:hover{
+    color:rgb(177 177 38);
+}
+.list-menu li:hover {
+    background-color: #551A8B;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-ico{
+    font-size:30px;
+    transition:all .2s;
+}
+.list-ico li a i:hover{
+    transform:translate(0px,-5px)
+                scale(1.2);
+}
+#home{
+    height:100vh;
+    width:80vw;
+    margin:0 auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+.darkmode{
+    position:absolute;
+    top:10px;
+    right:-50px;
+    display:flex;
+    border:1px solid green;
+    padding:5px;
+    font-size:20px;
+    cursor: pointer;
+}
+#sun{
+    display: none;
+}
+.myimage{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    background:url(./image/profile.jpg)center/cover no-repeat;
+}
+#myimage{
+    border:2px solid black;
+}
+
+.name{
+    margin-top:10px;
+    font-size:40px;
+    font-family: "Kaushan Script";
+}
+.short{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+}
+.down-icon{
+    font-size:30px;
+    margin-top:20px;
+    position: absolute;
+    bottom:15px;
+    cursor:pointer;
+    animation:updown 2s linear infinite;
+}
+@keyframes updown {
+    from{transform: scale(1);}
+    to{transform:scale(1.5)}
+}
+/*=====media screen===*/
+@media screen and (max-width:768px) {
+    #home{height:80vh;}
+    .darkmode{font-size:30px;}
+    .name{margin-top:20px;}
+    .short{font-size:30px;}
+}
+@media screen and (max-width:545px){#home{height:90vh}.myimage{height: 250px;width:250px;}.name{font-size:35px;text-align:center}#navbar{display:none}.darkmode{right:-18px; top:30px;}}
+@media screen and (max-width:400px){.name{font-size:30px;}.short{font-size:23px;}.myimage{height: 200px;width:200px;}}
+/*=========== About ==========*/
+#about{
+    background-color:rgba(184, 177, 177, 0.548);
+
+}
+.about-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px 150px;
+}
+.para{
+    width:60%;
+    font-size:20px;
+    line-break: 2px;
+    font-family: webkit-pictograph,monospace,system-ui;
+    text-align:justify;
+    padding:40px;
+    margin-left:10px;
+}
+.button{
+    background:olivedrab;
+    padding:5px 8px;
+    border-radius:3px;
+    cursor:pointer;
+    transition:all .2s;
+    font-size:20px;
+    float:right;
+}
+.button a{
+    text-decoration: none;
+    color:#fff;
+}
+.button a:hover{
+    color:orange;
+}
+.hey{
+    font-size:50px;
+    margin-bottom:10px;
+}
+.img-about{
+    background:url(./image/about.jpg)center/cover no-repeat;
+    height: 500px;
+    width:50%;
+    border-radius:10px;
+    box-shadow: 4px 4px 14px 2px black;
+}
+/*=====media screen===*/
+@media screen and (max-width:1048px){.para{margin-left:30px; padding:0; width:80%;}}
+@media screen and (max-width:918px){.about-flex{padding:50px 100px;}#navbar{left:0;}}
+@media screen and (max-width:708px){.para{font-size:15px; width:100%}.img-about{height:362px;}}
+@media screen and (max-width:600px){.about-flex{flex-direction: column;}.img-about{width:80%; margin-bottom:20px}}
+@media screen and (max-width:545px){.about-flex{width:100%;padding:40px}.para{margin-left:0;}.para{font-size:23px}.hey{font-family: revert;}}
+@media screen and (max-width:474px){.img-about{display: none;}.about-flex{padding:30px;}}
+
+/*==================Project==============*/
+#project{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:50px;
+    width:80%;
+    margin:0 auto;
+    grid-gap:30px;
+}
+.project-img, .project-img1{
+    height:500px;
+    border:1px solid black;
+    border-radius: 3px;
+    box-shadow: 8px 2px 15px 4px grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+}
+.project-img a, .project-img1 a{
+    color:#fff;
+    visibility:hidden;
+    padding:12px 20px;
+    border-bottom:1px solid black;
+    background: linear-gradient(to right, green, yellow);
+    border-radius:0px 20px 0px 20px;
+    transition:all .4s ease-in-out;
+}
+.project-img a:hover, .project-img1 a:hover{
+    color:blue;
+    background:rgba(255, 255, 255, 0.534);
+}
+.project-img{
+    background: url(./image/web.JPG)center/cover no-repeat;
+}
+.project-img1{
+    background: url(./image/web2.JPG)center/cover no-repeat;
+}
+.project-para{
+    font-size:20px;
+    margin-top:10px;
+    text-align:right;
+}
+/*=======media screen=======*/
+@media screen and (max-width:1140px){.project-img , .project-img1{ height :350px}}
+@media screen and (max-width:954px){#project{width:90%;}}
+@media screen and (max-width:740px){.project-img , .project-img1{height:230px}.project-para{font-size:12px}}
+@media screen and (max-width:550px){#project{width:100%; padding:25px}}
+@media screen and (max-width:397px){.project-img , .project-img1{height:167px}.project-para{font-size:10px}}
+/*========Skills*/
+#skill-title{
+    color:rgb(16, 155, 16);
+    text-shadow: 0px 3px 8px rgb(24, 228, 24);
+}
+.skills{
+    width:80%;
+    margin:10px auto;
+    text-align:center;
+    font-size:30px;
+    border-bottom:1px dashed salmon;
+    padding-bottom:20px;
+}
+.skill-flex{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top:20px;
+}
+.skill-icon{
+    font-size:80px;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.skill-icon:hover{
+    transform:rotateZ(360deg);
+}
+.fa-html5{
+    color:rgb(255, 81, 0);
+}
+.fa-css3-alt{
+    color:blue;
+}
+.fa-js{
+    color:rgb(248, 165, 11);
+}
+.fa-bootstrap{
+    color:purple;
+} 
+.fa-vuejs{
+    color:rgb(24, 195, 90);
+}
+/*==========media=====*/
+@media screen and (max-width:627px){.skills{font-size:23px;}.skill-icon{font-size:45px;}.skill-flex{width:60%;margin:10px auto;}}
+@media screen and (max-width:478px){.skill-flex{width:90%}}
+
+.contact-icon{
+    margin-top:30px;
+}
+#contact-para{
+    background-color:rgba(184, 177, 177, 0.548);
+}
+.contact-para{
+    color:indigo;
+    margin-top:20px;
+    font-size:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    padding:10px;
+}
+/*====media =============*/
+@media screen and (max-width:425px) {.contact-para{font-size: 17px; padding:20px ;font-family: sans-serif;}}
