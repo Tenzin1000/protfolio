@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .text-none{
     text-decoration: none;
@@ -131,19 +132,21 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    padding:50px 150px;
+    padding:50px 50px 50px 132px;
 }
 .para{
     width:60%;
     font-size:20px;
     line-break: 2px;
-    font-family: webkit-pictograph,monospace,system-ui;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align:justify;
-    padding:40px;
+    padding: 20px 0px 20px 28px;;
     margin-left:10px;
+    color:#524c4c;
+
 }
 .button{
-    background:olivedrab;
+    background:#0072ff;
     padding:5px 8px;
     border-radius:3px;
     cursor:pointer;
@@ -154,27 +157,31 @@
 .button a{
     text-decoration: none;
     color:#fff;
+    transition: all .2s ease-in-out;
 }
 .button a:hover{
-    color:orange;
+    color:red;
 }
 .hey{
     font-size:50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color:#464141;
     margin-bottom:10px;
 }
 .img-about{
     background:url(./image/about.jpg)center/cover no-repeat;
     height: 500px;
     width:50%;
-    border-radius:10px;
-    box-shadow: 4px 4px 14px 2px black;
+    border-radius:2px;
+    box-shadow: black 1px 2px 5px 0px;
 }
 /*=====media screen===*/
 @media screen and (max-width:1048px){.para{margin-left:30px; padding:0; width:80%;}}
 @media screen and (max-width:918px){.about-flex{padding:50px 100px;}#navbar{left:0;}}
-@media screen and (max-width:708px){.para{font-size:15px; width:100%}.img-about{height:362px;}}
+@media screen and (max-width:708px){.para{font-size:15px; width:100%}.img-about{height:200px;}}
 @media screen and (max-width:600px){.about-flex{flex-direction: column;}.img-about{width:80%; margin-bottom:20px}}
-@media screen and (max-width:545px){.about-flex{width:100%;padding:40px}.para{margin-left:0;}.para{font-size:23px}.hey{font-family: revert;}}
+@media screen and (max-width:545px){.about-flex{width:100%;padding:40px}.para{margin-left:0;}.para{font-size:20px}.hey{font-family: revert;}}
 @media screen and (max-width:474px){.img-about{display: none;}.about-flex{padding:30px;}}
 
 /*==================Project==============*/
@@ -186,8 +193,12 @@
     margin:0 auto;
     grid-gap:30px;
 }
-.project-img, .project-img1{
+.project-img, 
+.project-img1, 
+.project-img2,
+.project-img3{
     height:500px;
+    filter: blur(1px);
     border:1px solid black;
     border-radius: 3px;
     box-shadow: 8px 2px 15px 4px grey;
@@ -196,26 +207,38 @@
     justify-content: center;
     font-size:30px;
     cursor: pointer;
-    transition: all 2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
-.project-img a, .project-img1 a{
+.project-img a, 
+.project-img1 a, 
+.project-img2 a,
+.project-img3 a{
     color:#fff;
     visibility:hidden;
-    padding:12px 20px;
+    padding:10px 20px;
     border-bottom:1px solid black;
     background: linear-gradient(to right, green, yellow);
     border-radius:0px 20px 0px 20px;
     transition:all .4s ease-in-out;
 }
-.project-img a:hover, .project-img1 a:hover{
-    color:blue;
-    background:rgba(255, 255, 255, 0.534);
+.project-img a:hover, 
+.project-img1 a:hover, 
+.project-img2 a:hover,
+.project-img3 a:hover{
+    background:#0072ff;
+    color:#fff;
 }
 .project-img{
-    background: url(./image/web.JPG)center/cover no-repeat;
+    background: url(./image/customer/coffee.JPG)center/cover no-repeat;
 }
 .project-img1{
-    background: url(./image/web2.JPG)center/cover no-repeat;
+    background: url(./image/customer/corona.JPG)center/cover no-repeat;
+}
+.project-img2{
+    background: url(./image/customer/globeltech.JPG)center/cover no-repeat;
+}
+.project-img3{
+    background: url(./image/customer/Trek-nepal.JPG)center/cover no-repeat;
 }
 .project-para{
     font-size:20px;
@@ -223,15 +246,28 @@
     text-align:right;
 }
 /*=======media screen=======*/
-@media screen and (max-width:1140px){.project-img , .project-img1{ height :350px}}
+@media screen and (max-width:1140px){
+    .project-img, 
+    .project-img1, 
+    .project-img2,
+    .project-img3{ height :350px}}
 @media screen and (max-width:954px){#project{width:90%;}}
-@media screen and (max-width:740px){.project-img , .project-img1{height:230px}.project-para{font-size:12px}}
+@media screen and (max-width:740px){
+    .project-img, 
+    .project-img1, 
+    .project-img2,
+    .project-img3{height:230px}.project-para{font-size:12px}}
 @media screen and (max-width:550px){#project{width:100%; padding:25px}}
-@media screen and (max-width:397px){.project-img , .project-img1{height:167px}.project-para{font-size:10px}}
+@media screen and (max-width:425px){#project{display: block;} .project-img, .project-img1, .project-img2, .project-img3{font-size: 22px;}}
+@media screen and (max-width:397px){
+    .project-img, 
+    .project-img1, 
+    .project-img2,
+    .project-img3{height:167px}.project-para{font-size:10px}}
 /*========Skills*/
 #skill-title{
-    color:rgb(16, 155, 16);
-    text-shadow: 0px 3px 8px rgb(24, 228, 24);
+    color:#0072ff;
+    text-shadow:  1px 3px 3px #052a58;
 }
 .skills{
     width:80%;
@@ -280,7 +316,7 @@
     background-color:rgba(184, 177, 177, 0.548);
 }
 .contact-para{
-    color:indigo;
+    color:#1a93b5;
     margin-top:20px;
     font-size:20px;
     display: flex;
